@@ -1,0 +1,5 @@
+spring:
+  jpa:
+    show-sql: true
+    mapping-resources:
+      - hibernate/mapping.xml

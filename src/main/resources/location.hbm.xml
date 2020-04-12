@@ -1,0 +1,16 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="cc.gmw.carwash.location.model.Location">
+        <composite-id name="id" class="cc.gmw.carwash.location.model.LocationId" access="field">
+            <key-property name="value" column="id" access="field" type="string" length="36" />
+        </composite-id>
+        <component name="address" class="cc.gmw.carwash.location.model.LocationAddress" access="field">
+            <component name="street" class="cc.gmw.carwash.location.model.LocationStreet" access="field">
+                <property name="value"  column="street" type="string" length="200" access="field" />
+            </component>
+        </component>
+    </class>
+</hibernate-mapping>
